@@ -1,10 +1,10 @@
 name: "CodeQL"
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  # push:
+  #   branches: [ "master" ]
+  # pull_request:
+  #   branches: [ "master" ]
   # schedule:
   #   # einmal wöchentlich, unabhängig von Pushes/PRs (findet neue Advisories
   #   # für bereits vorhandene Codepfade, ohne dass sich der Code ändert)
