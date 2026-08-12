@@ -4,21 +4,19 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
+      day: "monday"
+      time: "04:00"
     open-pull-requests-limit: 5
     commit-message:
       prefix: "ci"
       include: "scope"
 
-  # Falls du Git Submodules nutzt (z. B. für rclone-Sources)
+  # Git Submodules (falls du rclone oder andere Libs als Submodule hast)
   - package-ecosystem: "gitsubmodule"
     directory: "/"
     schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 3
-
-  # Optional: CMake FetchContent (experimentell, aber harmlose Prüfung)
-  - package-ecosystem: "cmake"
-    directory: "/"
-    schedule:
       interval: "monthly"
+      day: "monday"
+      time: "04:00"
+    open-pull-requests-limit: 3
