@@ -17,7 +17,7 @@ jobs:
     runs-on: windows-latest
     
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
@@ -48,7 +48,7 @@ jobs:
     runs-on: windows-11-arm
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Install Qt (ARM64)
         uses: jurplel/install-qt-action@v4
         with:
@@ -80,7 +80,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
@@ -151,7 +151,7 @@ jobs:
     runs-on: macos-latest
     
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
@@ -180,7 +180,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Install Development Tools and Build Rclone Browser
         uses: vmactions/freebsd-vm@v1
         with:
@@ -206,7 +206,7 @@ jobs:
     needs: [build_windows, build_windows_arm64, build_linux, build_macos, build_freebsd]
     
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Create artifact directory
         run: rm -rf /tmp/artifacts && mkdir /tmp/artifacts
       - uses: actions/download-artifact@v4
