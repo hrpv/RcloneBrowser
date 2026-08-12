@@ -1,0 +1,25 @@
+version: 2
+updates:
+  # GitHub Actions (checkout, codeql-action, upload-artifact, etc.)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+
+  # Falls du Git Submodules nutzt (z. B. für rclone-Sources)
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 3
+
+  # Optional: CMake FetchContent (experimentell, aber harmlose Prüfung)
+  - package-ecosystem: "cmake"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+	  
