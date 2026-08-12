@@ -11,12 +11,3 @@ updates:
     commit-message:
       prefix: "ci"
       include: "scope"
-
-  # Git Submodules (falls du rclone oder andere Libs als Submodule hast)
-  - package-ecosystem: "gitsubmodule"
-    directory: "/"
-    schedule:
-      interval: "monthly"
-      day: "monday"
-      time: "04:00"
-    open-pull-requests-limit: 3
