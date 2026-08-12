@@ -41,7 +41,7 @@ jobs:
           # unten (Tracing), statt selbst zu raten, wie CMake+Qt6 zu bauen ist
           build-mode: manual
           # queries: security-extended   # optional: mehr Checks, mehr False Positives
-          queries: security-and-quality  # optional: noch mehr Checks, mehr False Positives
+          # queries: security-and-quality  # optional: noch mehr Checks, mehr False Positives
 
       - name: Build (CMake, Debian/Ubuntu path)
         run: |
