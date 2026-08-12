@@ -35,7 +35,7 @@ jobs:
           cmake -A x64 -DCMAKE_CONFIGURATION_TYPES="Release" -DCMAKE_PREFIX_PATH="$env:QT_ROOT_DIR" ..
           cmake --build . --config Release
           & "$env:QT_ROOT_DIR\bin\windeployqt.exe" --no-translations --no-compiler-runtime --no-svg ".\build\Release\RcloneBrowser.exe"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: windows
           path: build\build\Release\*
@@ -66,7 +66,7 @@ jobs:
           cmake -A ARM64 -DCMAKE_CONFIGURATION_TYPES="Release" -DCMAKE_PREFIX_PATH="$env:QT_ROOT_DIR" ..
           cmake --build . --config Release
           & "$env:QT_ROOT_DIR\bin\windeployqt.exe" --no-translations --no-compiler-runtime --no-svg ".\build\Release\RcloneBrowser.exe"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: windows-arm64
           path: build\build\Release\*
@@ -141,7 +141,7 @@ jobs:
           mkdir -p build/build
           mv ./*.AppImage "build/build/rclone-browser-${VERSION}-linux-x86_64.AppImage"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
          name: linux
          path: build/build/*.AppImage
@@ -170,7 +170,7 @@ jobs:
           cd build
           "$QT_ROOT_DIR/bin/macdeployqt" rclone-browser.app -executable="rclone-browser.app/Contents/MacOS/rclone-browser"
           mv rclone-browser.app Rclone\ Browser.app
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: macos
           path: build/build/*
@@ -195,7 +195,7 @@ jobs:
             cmake ..
             make
             
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: freebsd
           path: build/build/*
