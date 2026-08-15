@@ -1,10 +1,10 @@
 name: Build Rclone Browser
 
 on:
-#  push:
-#    branches:
-#      - main
-#      - master
+ push:
+   branches:
+     - main
+     - master
       
   workflow_dispatch:
 
